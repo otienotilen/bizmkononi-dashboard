@@ -1,0 +1,58 @@
+.home-s{
+  /* background-image: url(../../../src/assets/Ellipse\ 15.svg); */
+  grid-area: main;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: center;
+}
+.content-s{
+    padding-top: 300px;
+    padding-left: 300px;
+
+    justify-content: center;
+    justify-items: center;
+}
+.top-s{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    border-color: rgb(13, 15, 15);
+}
+.top-s-content{
+    background: #fafbfc;
+    bottom: #131212;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.06);
+    font-weight: bold;
+    color: #333; 
+    border-radius: 10px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    
+}
+.middle-s{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.middle-s-content{
+   background: #f2f8fc;
+    bottom: #fcfcfc;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.06);
+    font-weight: bold;
+    color: #333; 
+    border-radius: 2px;
+    position: relative;
+   
+    /* padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 200px;
+    padding-bottom: 200px;   */
+}

@@ -1,23 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import List from "./pages/list/List";
+import Single from "./pages/single/Single";
+import New from "./pages/new/New";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { productInputs, userInputs } from "./formSource";
+import "./style/dark.scss";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
+import { useState } from "react";
+import Navbar from "./components/navbar/Navbar";
+import Sidebar from "./components/sidebar/Sidebar";
+import Overview from './pages/insights/pages/Overview';
 
-function App() {
+import Products from './pages/insights/pages/Overview';
+import Apphome from './pages/insights/pages/Team';
+import Sales from './pages/insights/pages/Sales';
+import Team from './pages/insights/pages/Team';
+
+const App =() => {
+  const { darkMode } = useContext(DarkModeContext);
+
+  // const [sidebarOpen, setsidebarOpen] = useState(false);
+  // const openSidebar = () => {
+  //   setsidebarOpen(true);
+  // };
+  // const closeSidebar = () => {
+  //   setsidebarOpen(false);
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={darkMode ? "app dark" : "app"}>
+
+      {/* <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} /> */}
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="login" element={<Login />} />
+            <Route path="/overview" component={Overview} />
+            <Route exact path="/sales" component={Sales} />
+            <Route exact path="/t" component={Team} />
+            
+            <Route exact path="/signin" component={Overview} />
+            <Route exact path="/a" component={Apphome} />
+            <Route path="users">
+              <Route index element={<List />} />
+              <Route path=":userId" element={<Single />} />
+              <Route
+                path="new"
+                element={<New inputs={userInputs} title="Add New User" />}
+              />
+            </Route>
+            <Route path="products">
+              <Route index element={<List />} />
+              <Route path=":productId" element={<Single />} />
+              <Route
+                path="new"
+                element={<New inputs={productInputs} title="Add New Product" />}
+              />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+
+        {/* <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} /> */}
     </div>
   );
 }
