@@ -2,12 +2,12 @@ import './overview.scss';
 
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import Widget from "../../components/widget/Widget";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 ,
   BarChart,
   Bar,
-  Legend, } from 'recharts';
+  PieChart, Pie, Sector,
+   } from 'recharts';
 
 const data = [
   
@@ -24,7 +24,19 @@ const data = [
 ];
 
 
-const Overview = () => {
+const Overview = (props) => {
+  const RADIAN = Math.PI / 180;
+  const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill, payload, percent, value } = props;
+  const sin = Math.sin(-RADIAN * midAngle);
+  const cos = Math.cos(-RADIAN * midAngle);
+  const sx = cx + (outerRadius + 10) * cos;
+  const sy = cy + (outerRadius + 10) * sin;
+  const mx = cx + (outerRadius + 30) * cos;
+  const my = cy + (outerRadius + 30) * sin;
+  const ex = mx + (cos >= 0 ? 1 : -1) * 22;
+  const ey = my;
+  const textAnchor = cos >= 0 ? 'start' : 'end';
+
   
   return (
     <div className="overview">
@@ -89,23 +101,13 @@ const Overview = () => {
               <div className="chart">
                   <h4>Customer Churn Rate</h4>
                 <ResponsiveContainer width="100%" aspect={2 / 1}>
-           
-                  <AreaChart width={730} height={250} data={data}
-                   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                   <defs>
-                   <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
-                   <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-                   <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
-                   </linearGradient>
-    
-                   </defs>
-                   <XAxis dataKey="name" />
-                   <YAxis />
-                   <CartesianGrid strokeDasharray="3 3" />
-                   <Tooltip />
-                   <Area type="monotone" dataKey="Total" stroke="#8884d8" fillOpacity={1} fill="url(#total)" />
+                  <PieChart width={730} height={250}>
   
-                  </AreaChart>
+                   <Pie data={data} dataKey="Total"
+                    nameKey="name" cx="50%" cy="50%"
+                     innerRadius={60} outerRadius={80}
+                      fill="#82ca9d" label />
+                  </PieChart>
                 </ResponsiveContainer>
               </div>
 
