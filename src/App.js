@@ -11,9 +11,9 @@ import { DarkModeContext } from "./context/darkModeContext";
 import { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
-import Overview from './pages/insights/pages/Overview';
+import Overview from './pages/overview/Overview';
 
-import Products from './pages/insights/pages/Overview';
+// import Products from './pages/overview/Overview';
 import Apphome from './pages/insights/pages/Team';
 import Sales from './pages/insights/pages/Sales';
 import Team from './pages/insights/pages/Team';
@@ -35,18 +35,18 @@ const App =() => {
       {/* <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} /> */}
 
       <BrowserRouter>
-        <Routes>
+        <Routes>  
           <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
-            <Route path="/overview" component={Overview} />
-            <Route exact path="/sales" component={Sales} />
-            <Route exact path="/t" component={Team} />
+            <Route index element={<Home />} /> 
+            <Route path="login" element={<Login />} /> 
+            <Route path="overview" element={<Overview />} />
+            <Route exact path="sales" element={<Sales />} />
+            <Route exact path="t" element={<Team />} />
             
-            <Route exact path="/signin" component={Overview} />
-            <Route exact path="/a" component={Apphome} />
+            {/* <Route exact path="/signin" component={Overview} /> */}
+            <Route exact path="a" element={<Apphome />} />
             <Route path="users">
-              <Route index element={<List />} />
+              <Route index element={<List />} />  
               <Route path=":userId" element={<Single />} />
               <Route
                 path="new"

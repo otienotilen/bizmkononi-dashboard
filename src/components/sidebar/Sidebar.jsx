@@ -63,7 +63,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
             </div>
 
              <div className="dropdown-item">
-              <a href="/overview"><p>. Customers Insights</p></a>
+              <a href="overview"><p>. Customers Insights</p></a>
             </div>
              <div className="dropdown-item">
               <a href="/products"><p>. Chum Rate Insights</p></a>
