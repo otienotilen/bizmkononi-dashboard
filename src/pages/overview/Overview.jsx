@@ -4,6 +4,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
 ,
+LineChart, Line,Legend,
   BarChart,
   Bar,
   PieChart, Pie, Sector,
@@ -25,18 +26,7 @@ const data = [
 
 
 const Overview = (props) => {
-  const RADIAN = Math.PI / 180;
-  const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill, payload, percent, value } = props;
-  const sin = Math.sin(-RADIAN * midAngle);
-  const cos = Math.cos(-RADIAN * midAngle);
-  const sx = cx + (outerRadius + 10) * cos;
-  const sy = cy + (outerRadius + 10) * sin;
-  const mx = cx + (outerRadius + 30) * cos;
-  const my = cy + (outerRadius + 30) * sin;
-  const ex = mx + (cos >= 0 ? 1 : -1) * 22;
-  const ey = my;
-  const textAnchor = cos >= 0 ? 'start' : 'end';
-
+  
   
   return (
     <div className="overview">
@@ -50,37 +40,44 @@ const Overview = (props) => {
             <p>Here is your today's insights</p>
           </div>
         
-        
+        <div style={{display: "flex", justifyContent: "space-evenly"}}>
         <div className="trial">
             <h5 style={{color: "blue"}}>$4000</h5>
           <h5>Total Revenue</h5>
+        </div>
+         <div className="trial">
+            <h5 style={{color: "blue"}}>240</h5>
+          <h5>Total Orders</h5>
+        </div>
+         <div className="trial">
+            <h5 style={{color: "blue"}}>1.2%</h5>
+          <h5>Customer Churn Rate</h5>
+        </div>
+         <div className="trial">
+            <h5 style={{color: "blue"}}>8.5%</h5>
+          <h5>Repeat Purchase Rate</h5>
+        </div>
         </div>
           <div className="chartContainer">
               <div className="chart">
                   <h4>Customer Churn Rate</h4>
                 <ResponsiveContainer width="100%" aspect={2 / 1}>
            
-                  <AreaChart width={730} height={250} data={data}
-                   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                   <defs>
-                   <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
-                   <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-                   <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
-                   </linearGradient>
-    
-                   </defs>
-                   <XAxis dataKey="name" />
-                   <YAxis />
-                   <CartesianGrid strokeDasharray="3 3" />
-                   <Tooltip />
-                   <Area type="monotone" dataKey="Total" stroke="#8884d8" fillOpacity={1} fill="url(#total)" />
+                  <LineChart width={730} height={250} data={data}
+                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                     <CartesianGrid strokeDasharray="3 3" />
+                     <XAxis dataKey="name" />
+                     <YAxis />
+                     <Tooltip />
+                     <Legend />
+                     <Line type="monotone" dataKey="Total" stroke="#3283B8" />
   
-                  </AreaChart>
+                   </LineChart>
                 </ResponsiveContainer>
               </div>
 
                <div className="chart">
-                   <h4>Customer Churn Rate</h4>
+                   <h4>Customer Most Buying Day</h4>
                   <ResponsiveContainer width="100%" aspect={2 / 1}>
            
                     <BarChart width={730} height={250} data={data}>
@@ -89,7 +86,7 @@ const Overview = (props) => {
                     <YAxis dataKey="Total" />
                     <Tooltip />
  
-                    <Bar type="monotone" dataKey="Total" stroke="#8884d8" fillOpacity={1} fill="url(#total)" />
+                    <Bar type="monotone" dataKey="Total" stroke="#3282B8" fillOpacity={1} fill="#3283B8" />
  
                      </BarChart>
                   </ResponsiveContainer>
@@ -99,15 +96,21 @@ const Overview = (props) => {
           
            <div className="chartContainer">
               <div className="chart">
-                  <h4>Customer Churn Rate</h4>
+                  <h4>Most Selling Product</h4>
                 <ResponsiveContainer width="100%" aspect={2 / 1}>
-                  <PieChart width={730} height={250}>
-  
-                   <Pie data={data} dataKey="Total"
-                    nameKey="name" cx="50%" cy="50%"
-                     innerRadius={60} outerRadius={80}
-                      fill="#82ca9d" label />
-                  </PieChart>
+                 <PieChart width={400} height={400}>
+                   <Pie
+           
+                      data={data}
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={60}
+                      outerRadius={80}
+                      
+                     type="monotone" dataKey="Total" stroke="#ffffff" fillOpacity={1} fill="#3283B8" 
+            
+                    />
+                 </PieChart>
                 </ResponsiveContainer>
               </div>
 
@@ -120,8 +123,8 @@ const Overview = (props) => {
                     <XAxis dataKey="name" />
                     <YAxis dataKey="Total" />
                     <Tooltip />
- 
-                    <Bar type="monotone" dataKey="Total" stroke="#8884d8" fillOpacity={1} fill="url(#total)" />
+
+                    <Bar type="monotone" dataKey="Total" stroke="#8884d8" fillOpacity={1} fill="#3283B8" />
  
                      </BarChart>
                   </ResponsiveContainer>

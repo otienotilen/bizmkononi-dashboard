@@ -36,14 +36,14 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
             BizMkononi</span>
         </Link>
       </div>
-    
+         <br/>
       <div className="center">
         <ul>
-          {/* dropdown trial */}
+          {/* dropdown  */}
          
          {/* officially starts here */}
-          <p className="title">MAIN</p>
            <li>
+             <br/>
           <div className="dropdown">
           <div className="dropdown-btn" onClick={e => checkStatus()}>
               <DashboardIcon className="icon" />
@@ -53,25 +53,31 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
             {isActive && (
             
              <div className="dropdown-content">
-               <Link to="/">
+               <Link to="/" style={{ textDecoration: "none" }}>
             <div className="dropdown-item">
               <p>. Overview</p>
             </div>
               </Link>
+              <Link to="/overview" style={{ textDecoration: "none" }}>
              <div className="dropdown-item">
-              <a href="/users"><p>. Sales Insights</p></a>
+              <p>. Sales Insights</p>
             </div>
-
+              </Link>
+               <Link to="/overview" style={{ textDecoration: "none" }}>
              <div className="dropdown-item">
-              <a href="overview"><p>. Customers Insights</p></a>
+              <p>. Customers Insights</p>
             </div>
+            </Link>
+            <Link to="/overview" style={{ textDecoration: "none" }}>
              <div className="dropdown-item">
-              <a href="/products"><p>. Chum Rate Insights</p></a>
+              <p>. Chum Rate Insights</p>
             </div>
+            </Link>
+            <Link to="/login" style={{ textDecoration: "none" }}>
              <div className="dropdown-item">
-              <a href="/login"><p>. Revenue Insights</p></a>
+              <p>. Revenue Insights</p>
             </div>
-               
+               </Link>
           </div>
            )}
          </div>
@@ -81,70 +87,46 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
             <span>Businesses</span>
           </li>
           <hr/>
-          <p className="title">LISTS</p>
-          <Link to="/users" style={{ textDecoration: "none" }}>
+          <p className="title">Section</p>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <li>
               <PersonOutlineIcon className="icon" />
-              <span>Users</span>
+              <span>Sales</span>
             </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: "none" }}>
+          <Link to="/overview" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
-              <span>Products</span>
+              <span>Supplies</span>
             </li>
           </Link>
+           <Link to="/products" style={{ textDecoration: "none" }}>
           <li>
             <CreditCardIcon className="icon" />
-            <span>Orders</span>
+            <span>Customers</span>
           </li>
+          </Link>
+           <Link to="/overview" style={{ textDecoration: "none" }}>
           <li>
             <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
+            <span>Suppliers</span>
           </li>
-          <p className="title">USEFUL</p>
+          </Link>
+          <Link to="/login" style={{ textDecoration: "none" }}>
           <li>
             <InsertChartIcon className="icon" />
-            <span>Stats</span>
+            <span>Products</span>
           </li>
+          </Link>
+          <Link to="/" style={{ textDecoration: "none" }}>
           <li>
             <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
+            <span>Employees</span>
           </li>
-          <p className="title">SERVICE</p>
-          <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>System Health</span>
-          </li>
-          <li>
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Logs</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Settings</span>
-          </li>
-          <p className="title">USER</p>
-          <li>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-          </li>
-          <li>
-            <ExitToAppIcon className="icon" />
-            <span>Logout</span>
-          </li>
+         </Link>
         </ul>
       </div>
-      <div className="bottom">
-        <div
-          className="colorOption"
-          onClick={() => dispatch({ type: "LIGHT" })}
-        ></div>
-        <div
-          className="colorOption"
-          onClick={() => dispatch({ type: "DARK" })}
-        ></div>
-      </div>
+      
     </div>
   );
 };
