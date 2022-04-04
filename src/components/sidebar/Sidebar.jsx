@@ -16,16 +16,15 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext, useState } from "react";
 import am from "../../assets/logo.png";
 
-
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
-  const [isActive, setIsActive] = useState(false)
-  const checkStatus = () =>{
-    if(isActive){
-      setIsActive(false)
-    }else{
-      setIsActive(true)
+  const [isActive, setIsActive] = useState(false);
+  const checkStatus = () => {
+    if (isActive) {
+      setIsActive(false);
+    } else {
+      setIsActive(true);
     }
-  }
+  };
   const { dispatch } = useContext(DarkModeContext);
   return (
     <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
@@ -33,60 +32,60 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">
             <img src={am} alt="logo" />
-            BizMkononi</span>
+            BizMkononi
+          </span>
         </Link>
       </div>
-         <br/>
+      <br />
       <div className="center">
         <ul>
           {/* dropdown  */}
-         
-         {/* officially starts here */}
-           <li>
-             <br/>
-          <div className="dropdown">
-          <div className="dropdown-btn" onClick={e => checkStatus()}>
-              <DashboardIcon className="icon" />
-              <span>Insights</span> 
-            <span className="fa fa-caret-down"></span>
+
+          {/* officially starts here */}
+          <li>
+            <br />
+            <div className="dropdown">
+              <div className="dropdown-btn" onClick={(e) => checkStatus()}>
+                <DashboardIcon className="icon" />
+                <span>Insights</span>
+                <span className="fa fa-caret-down"></span>
+              </div>
+              {isActive && (
+                <div className="dropdown-content">
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <div className="dropdown-item">
+                      <p>. Overview</p>
+                    </div>
+                  </Link>
+                  <Link to="/sales" style={{ textDecoration: "none" }}>
+                    <div className="dropdown-item">
+                      <p>. Sales Insights</p>
+                    </div>
+                  </Link>
+                  <Link to="/customers" style={{ textDecoration: "none" }}>
+                    <div className="dropdown-item">
+                      <p>. Customers Insights</p>
+                    </div>
+                  </Link>
+                  <Link to="/churn" style={{ textDecoration: "none" }}>
+                    <div className="dropdown-item">
+                      <p>. Churm Rate Insights</p>
+                    </div>
+                  </Link>
+                  <Link to="/revenue" style={{ textDecoration: "none" }}>
+                    <div className="dropdown-item">
+                      <p>. Revenue Insights</p>
+                    </div>
+                  </Link>
+                </div>
+              )}
             </div>
-            {isActive && (
-            
-             <div className="dropdown-content">
-               <Link to="/" style={{ textDecoration: "none" }}>
-            <div className="dropdown-item">
-              <p>. Overview</p>
-            </div>
-              </Link>
-              <Link to="/overview" style={{ textDecoration: "none" }}>
-             <div className="dropdown-item">
-              <p>. Sales Insights</p>
-            </div>
-              </Link>
-               <Link to="/overview" style={{ textDecoration: "none" }}>
-             <div className="dropdown-item">
-              <p>. Customers Insights</p>
-            </div>
-            </Link>
-            <Link to="/overview" style={{ textDecoration: "none" }}>
-             <div className="dropdown-item">
-              <p>. Chum Rate Insights</p>
-            </div>
-            </Link>
-            <Link to="/login" style={{ textDecoration: "none" }}>
-             <div className="dropdown-item">
-              <p>. Revenue Insights</p>
-            </div>
-               </Link>
-          </div>
-           )}
-         </div>
-         </li>
+          </li>
           <li>
             <DashboardIcon className="icon" />
             <span>Businesses</span>
           </li>
-          <hr/>
+          <hr />
           <p className="title">Section</p>
           <Link to="/" style={{ textDecoration: "none" }}>
             <li>
@@ -100,33 +99,32 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
               <span>Supplies</span>
             </li>
           </Link>
-           <Link to="/products" style={{ textDecoration: "none" }}>
-          <li>
-            <CreditCardIcon className="icon" />
-            <span>Customers</span>
-          </li>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <CreditCardIcon className="icon" />
+              <span>Customers</span>
+            </li>
           </Link>
-           <Link to="/overview" style={{ textDecoration: "none" }}>
-          <li>
-            <LocalShippingIcon className="icon" />
-            <span>Suppliers</span>
-          </li>
+          <Link to="/overview" style={{ textDecoration: "none" }}>
+            <li>
+              <LocalShippingIcon className="icon" />
+              <span>Suppliers</span>
+            </li>
           </Link>
           <Link to="/login" style={{ textDecoration: "none" }}>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Products</span>
-          </li>
+            <li>
+              <InsertChartIcon className="icon" />
+              <span>Products</span>
+            </li>
           </Link>
           <Link to="/" style={{ textDecoration: "none" }}>
-          <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>Employees</span>
-          </li>
-         </Link>
+            <li>
+              <NotificationsNoneIcon className="icon" />
+              <span>Employees</span>
+            </li>
+          </Link>
         </ul>
       </div>
-      
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import "./sales.scss";
+import "./churn.scss";
 
 import Sidebar from "../../../components/sidebar/Sidebar";
 import Navbar from "../../../components/navbar/Navbar";
@@ -30,7 +30,7 @@ const data = [
   { name: "December", Total: 1700 },
 ];
 
-const Sales = () => {
+const Churn = () => {
   return (
     <div className="overview">
       <Sidebar />
@@ -150,4 +150,4 @@ const Sales = () => {
   );
 };
 
-export default Sales;
+export default Churn;
