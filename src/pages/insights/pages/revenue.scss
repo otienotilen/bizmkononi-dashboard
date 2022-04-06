@@ -1,3 +1,12 @@
+@media screen and (max-width: 480px) {
+  .overview {
+    display: inline;
+    .a {
+      flex-direction: column;
+    }
+  }
+}
+
 .overview {
   display: flex;
   width: 100%;
@@ -7,8 +16,10 @@
     .homeLayout {
       overflow-y: auto;
       height: 90vh;
-      .greeting {
-        margin: 50px;
+      .greeting1 {
+        margin-left: 1300px;
+        width: 50px;
+        padding: 50px;
       }
     }
     .widgets,
@@ -40,9 +51,12 @@
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     padding: 10px;
     color: gray;
+    align-items: center;
+    justify-content: center;
 
-    .title {
+    h4 {
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .chartGrid {

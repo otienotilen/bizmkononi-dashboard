@@ -38,19 +38,18 @@ const Churn = () => {
         <Navbar />
         <div className="homeLayout">
           <div className="greeting">
-            <h3>Welcome John Doe,</h3>
             <br />
-            <p>Here is your today's insights</p>
+            <p>Churn</p>
           </div>
 
           <div style={{ display: "flex", justifyContent: "space-evenly" }}>
             <div className="trial">
-              <h5 style={{ color: "blue" }}>$4000</h5>
-              <h5>Total Revenue</h5>
+              <h5 style={{ color: "blue" }}>-14</h5>
+              <h5>Customer Loss</h5>
             </div>
             <div className="trial">
-              <h5 style={{ color: "blue" }}>240</h5>
-              <h5>Total Orders</h5>
+              <h5 style={{ color: "blue" }}>5</h5>
+              <h5>New Customers Aquired</h5>
             </div>
             <div className="trial">
               <h5 style={{ color: "blue" }}>1.2%</h5>
@@ -61,10 +60,10 @@ const Churn = () => {
               <h5>Repeat Purchase Rate</h5>
             </div>
           </div>
-          <div className="chartContainer">
+          <div className="chartcontainerC">
             <div className="chart">
               <h4>Customer Churn Rate</h4>
-              <ResponsiveContainer width="100%" aspect={2 / 1}>
+              <ResponsiveContainer width="70%" aspect={2 / 1}>
                 <LineChart
                   width={730}
                   height={250}
@@ -80,69 +79,8 @@ const Churn = () => {
                 </LineChart>
               </ResponsiveContainer>
             </div>
-
-            <div className="chart">
-              <h4>Customer Most Buying Day</h4>
-              <ResponsiveContainer width="100%" aspect={2 / 1}>
-                <BarChart width={730} height={250} data={data}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis dataKey="Total" />
-                  <Tooltip />
-
-                  <Bar
-                    type="monotone"
-                    dataKey="Total"
-                    stroke="#3282B8"
-                    fillOpacity={1}
-                    fill="#3283B8"
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
           </div>
 
-          <div className="chartContainer">
-            <div className="chart">
-              <h4>Most Selling Product</h4>
-              <ResponsiveContainer width="100%" aspect={2 / 1}>
-                <PieChart width={400} height={400}>
-                  <Pie
-                    data={data}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={80}
-                    type="monotone"
-                    dataKey="Total"
-                    stroke="#ffffff"
-                    fillOpacity={1}
-                    fill="#3283B8"
-                  />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-
-            <div className="chart">
-              <h4>Customer Churn Rate</h4>
-              <ResponsiveContainer width="100%" aspect={2 / 1}>
-                <BarChart width={730} height={250} data={data}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis dataKey="Total" />
-                  <Tooltip />
-
-                  <Bar
-                    type="monotone"
-                    dataKey="Total"
-                    stroke="#8884d8"
-                    fillOpacity={1}
-                    fill="#3283B8"
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
           {/* end of charts */}
         </div>
       </div>
