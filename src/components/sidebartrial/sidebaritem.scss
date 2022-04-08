@@ -1,0 +1,36 @@
+.sidebarItem {
+  padding: 1em;
+  display: block;
+  transition: background-color 0.15s;
+}
+
+.sidebarItem:hover {
+  background-color: gray;
+}
+
+.sidebarTitle {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebarTitle span i {
+  display: inline-block;
+  color: #000000;
+  width: 2.5em;
+}
+.sidebarTitle .toggle-btn {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sidebarItem.open .sidebarTitle .toggle-btn {
+  transform: rotate(180deg);
+}
+.sidebarContent {
+  padding-top: 0.25em;
+  height: 0;
+  overflow: hidden;
+}
+.sidebarItem.open .sidebarContent {
+  height: auto;
+}
