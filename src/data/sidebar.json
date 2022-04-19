@@ -1,0 +1,155 @@
+[
+  {
+    "title": "Insights",
+    "icon": "bi-gear-fill",
+
+    "childrens": [
+      {
+        "title": "Overview",
+        "path": "/overview"
+      },
+      {
+        "title": "Sales Insights",
+        "path": "/sales"
+      },
+      {
+        "title": "Customers Insights",
+        "path": "/customers"
+      },
+      {
+        "title": "Churn Rate Insights",
+        "path": "/churn"
+      },
+      {
+        "title": "Revenue Insights",
+        "path": "/revenue"
+      }
+    ]
+  },
+  {
+    "title": "Businesses",
+    "icon": "bi-info-circle-fill",
+    "childrens": [
+      {
+        "title": "My Businesses",
+        "path": "/mybusinesses"
+      },
+      {
+        "title": "New Business",
+        "path": "/newbusiness"
+      }
+    ]
+  },
+  { "title": "________________________" },
+
+  {
+    "title": "Sales",
+    "icon": "bi-person-fill",
+    "childrens": [
+      {
+        "title": "Profile",
+        "path": "/profile"
+      },
+      {
+        "title": "Settings",
+        "childrens": [
+          {
+            "title": "Account",
+            "path": "/settings/account"
+          },
+          {
+            "title": "Billing",
+            "childrens": [
+              {
+                "title": "Payment",
+                "path": "/settings/billing/payment"
+              },
+              {
+                "title": "Subscription",
+                "path": "/settings/billing/subscription"
+              }
+            ]
+          },
+          {
+            "title": "Notifications",
+            "path": "/settings/notifications"
+          }
+        ]
+      },
+      {
+        "title": "Logout",
+        "path": "/logout"
+      }
+    ]
+  },
+  {
+    "title": "Supplies",
+    "icon": "bi-view-list",
+    "childrens": [
+      {
+        "title": "Search",
+        "path": "/search"
+      },
+      {
+        "title": "History",
+        "path": "/history"
+      }
+    ]
+  },
+  {
+    "title": "Customers",
+    "icon": "bi-view-list",
+    "childrens": [
+      {
+        "title": "Search",
+        "path": "/search"
+      },
+      {
+        "title": "History",
+        "path": "/history"
+      }
+    ]
+  },
+  {
+    "title": "Suppliers",
+    "icon": "bi-view-list",
+    "childrens": [
+      {
+        "title": "Search",
+        "path": "/search"
+      },
+      {
+        "title": "History",
+        "path": "/history"
+      }
+    ]
+  },
+  {
+    "title": "Products",
+    "icon": "bi-view-list",
+    "childrens": [
+      {
+        "title": "Search",
+        "path": "/search"
+      },
+      {
+        "title": "History",
+        "path": "/history"
+      }
+    ]
+  },
+  {
+    "title": "Employees",
+    "icon": "bi-view-list",
+    "childrens": [
+      {
+        "title": "Search",
+        "path": "/search"
+      },
+      {
+        "title": "History",
+        "path": "/history"
+      }
+    ]
+  }
+]

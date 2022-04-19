@@ -2,24 +2,37 @@ import React from "react";
 import "./sidebaritem.scss";
 import { useState } from "react";
 
-function Sidebaritem() {
+function Sidebaritem({ item }) {
   const [open, setOpen] = useState(false);
-  return (
-    <div className={open ? "sidebarItem open" : "sidebarItem"}>
-      <div className="sidebarTitle">
-        <span>
-          <i className="bi-list"></i>
-          Insights
-        </span>
-        <i
-          className="bi-chevron-down toggle-btn"
-          onClick={() => setOpen(!open)}
-        ></i>
-      </div>
+  if (item.childrens) {
+    return (
+      <div className={open ? "sidebarItem open" : "sidebarItem"}>
+        <div className="sidebarTitle">
+          <span>
+            {item.icon && <i className={item.icon}></i>}
+            {item.title}
+          </span>
+          <i
+            className="bi-chevron-down toggle-btn"
+            onClick={() => setOpen(!open)}
+          ></i>
+        </div>
 
-      <div className="sidebarContent">Hello</div>
-    </div>
-  );
+        <div className="sidebarContent">
+          {item.childrens.map((child, index) => (
+            <Sidebaritem key={index} item={child} />
+          ))}
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <a href={item.path || "#"} className="sidebar-item plain">
+        {item.icon && <i className={item.icon}></i>}
+        {item.title}
+      </a>
+    );
+  }
 }
 
 export default Sidebaritem;

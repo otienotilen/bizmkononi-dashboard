@@ -2,14 +2,15 @@
   padding: 1em;
   display: block;
   transition: background-color 0.15s;
+  border-radius: 1px;
 }
 
 .sidebarItem:hover {
-  background-color: gray;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .sidebarTitle {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   display: flex;
   justify-content: space-between;
 }
@@ -23,14 +24,17 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.sidebarItem.open .sidebarTitle .toggle-btn {
+.sidebarItem.open > .sidebarTitle .toggle-btn {
   transform: rotate(180deg);
 }
 .sidebarContent {
   padding-top: 0.25em;
   height: 0;
   overflow: hidden;
+  // decoration: none;
+  display: flex;
+  flex-direction: column;
 }
-.sidebarItem.open .sidebarContent {
+.sidebarItem.open > .sidebarContent {
   height: auto;
 }
