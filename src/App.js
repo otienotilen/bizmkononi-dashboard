@@ -19,6 +19,9 @@ import Sales from "./pages/insights/pages/Sales";
 import Team from "./pages/insights/pages/Team";
 import Churn from "./pages/insights/pages/Churn";
 import Customers from "./pages/insights/pages/Customers";
+import Mybusinesses from "./pages/businesses/pages/Mybusinesses";
+import Newbusiness from "./pages/businesses/pages/Newbusiness";
+import Sales1 from "./pages/sales/pages/Sales";
 
 const App = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -37,6 +40,9 @@ const App = () => {
             <Route exact path="revenue" element={<Revenue />} />
             <Route exact path="customers" element={<Customers />} />
             <Route exact path="a" element={<Apphome />} />
+            <Route exact path="mybusinesses" element={<Mybusinesses />} />
+            <Route exact path="newbusiness" element={<Newbusiness />} />
+            <Route exact path="sales1" element={<Sales1 />} />
             <Route path="users">
               <Route index element={<List />} />
               <Route path=":userId" element={<Single />} />
