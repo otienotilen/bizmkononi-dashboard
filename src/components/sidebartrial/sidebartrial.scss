@@ -1,9 +1,15 @@
 .sidebarTrial {
-  width: 300px;
-  flex-shrink: 0;
-  background-color: rgb(158, 213, 250);
+  width: 240px;
+  // flex-shrink: 0;
+  // background-color: rgb(158, 213, 250);
+  // height: 100vh;
+  // overflow: auto;
+
+  background-color: #bbe1fa;
+  overflow-y: auto;
+  // flex: 2;
+  border-right: 0.5px solid rgb(230, 227, 227);
   height: 100vh;
-  overflow: auto;
 }
 .top {
   height: 50px;

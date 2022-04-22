@@ -1,5 +1,5 @@
 import "./sales.scss";
-
+import Sidebartrial from "../../../components/sidebartrial/Sidebartrial";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import Navbar from "../../../components/navbar/Navbar";
 import Featured from "../../../components/featured/Featured";
@@ -34,7 +34,7 @@ const data = [
 const Sales = () => {
   return (
     <div className="overview">
-      <Sidebar />
+      <Sidebartrial />
       <div className="containerOverview">
         <Navbar />
         <div className="homeLayout">

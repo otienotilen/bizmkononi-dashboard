@@ -17,10 +17,11 @@ function Sidebartrial() {
         </Link>
       </div>
       <br />
+      <Sidebaritem />
 
-      {items.map((item, index) => (
+      {/* {items.map((item, index) => (
         <Sidebaritem key={index} item={item} />
-      ))}
+      ))}  */}
     </div>
   );
 }

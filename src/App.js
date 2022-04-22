@@ -22,6 +22,7 @@ import Customers from "./pages/insights/pages/Customers";
 import Mybusinesses from "./pages/businesses/pages/Mybusinesses";
 import Newbusiness from "./pages/businesses/pages/Newbusiness";
 import Sales1 from "./pages/sales/pages/Sales";
+import Addasale from "./pages/sales/pages/Addasale";
 
 const App = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -31,7 +32,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/">
-            <Route index element={<Home />} />
+            <Route index element={<Overview />} />
             <Route path="login" element={<Login />} />
             <Route path="overview" element={<Overview />} />
             <Route exact path="sales" element={<Sales />} />
@@ -43,6 +44,7 @@ const App = () => {
             <Route exact path="mybusinesses" element={<Mybusinesses />} />
             <Route exact path="newbusiness" element={<Newbusiness />} />
             <Route exact path="sales1" element={<Sales1 />} />
+            <Route exact path="addasale" element={<Addasale />} />
             <Route path="users">
               <Route index element={<List />} />
               <Route path=":userId" element={<Single />} />

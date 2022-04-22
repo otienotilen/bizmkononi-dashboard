@@ -11,31 +11,32 @@ function Mybusinesses() {
       <Sidebartrial />
       <div className="containerOverview">
         <Navbar />
-
-        <div className="top1">
-          <div className="left">
-            <h4>Businesses</h4>
-            <br />
-            <h4>List of all my businesses</h4>
+        <div className="homeLayout">
+          <div className="top1">
+            <div className="left">
+              <h4>Businesses</h4>
+              <br />
+              <h4>List of all my businesses</h4>
+            </div>
+            <div className="right">Add New</div>
           </div>
-          <div className="right">Add New</div>
-        </div>
-        <div className="card">
-          <span className="cardimage">
-            <img src={am} alt="logo" />
-          </span>
-          <div>Name</div>
-          <div>
-            <br />
-            <hr />
-            Product
-          </div>
+          <div className="card">
+            <span className="cardimage">
+              <img src={am} alt="logo" />
+            </span>
+            <div>Name</div>
+            <div>
+              <br />
+              <hr />
+              Product
+            </div>
 
-          <div>
-            <br />
-            <div className="button">Read More</div>
-            <br />
-            <div className="button">Manage</div>
+            <div>
+              <br />
+              <div className="button">Read More</div>
+              <br />
+              <div className="button">Manage</div>
+            </div>
           </div>
         </div>
       </div>

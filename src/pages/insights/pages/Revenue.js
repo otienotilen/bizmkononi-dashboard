@@ -2,6 +2,7 @@ import "./revenue.scss";
 import Featured from "../../../components/featured/Featured";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import Navbar from "../../../components/navbar/Navbar";
+import Sidebartrial from "../../../components/sidebartrial/Sidebartrial";
 import {
   AreaChart,
   Area,
@@ -33,7 +34,7 @@ const data = [
 const Revenue = (props) => {
   return (
     <div className="overview">
-      <Sidebar />
+      <Sidebartrial />
       <div className="containerOverview">
         <Navbar />
         <div className="homeLayout">
@@ -81,25 +82,6 @@ const Revenue = (props) => {
               </ResponsiveContainer>
             </div>
 
-            {/* <div className="chart">
-              <h4>Revenue Progress</h4>
-              <ResponsiveContainer width="100%" aspect={2 / 1}>
-                <PieChart width={400} height={400}>
-                  <Pie
-                    data={data}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={80}
-                    type="monotone"
-                    dataKey="Total"
-                    stroke="#ffffff"
-                    fillOpacity={1}
-                    fill="#3283B8"
-                  />
-                </PieChart>
-              </ResponsiveContainer>
-            </div> */}
             <div className="chart">
               <Featured />
             </div>

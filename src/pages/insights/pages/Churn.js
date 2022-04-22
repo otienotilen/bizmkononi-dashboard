@@ -1,5 +1,5 @@
 import "./churn.scss";
-
+import Sidebartrial from "../../../components/sidebartrial/Sidebartrial";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import Navbar from "../../../components/navbar/Navbar";
 import {
@@ -33,7 +33,7 @@ const data = [
 const Churn = () => {
   return (
     <div className="overview">
-      <Sidebar />
+      <Sidebartrial />
       <div className="containerOverview">
         <Navbar />
         <div className="homeLayout">

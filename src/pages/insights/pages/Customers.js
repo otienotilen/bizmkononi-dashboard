@@ -1,6 +1,7 @@
 import "./customers.scss";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import Navbar from "../../../components/navbar/Navbar";
+import Sidebartrial from "../../../components/sidebartrial/Sidebartrial";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 import {
   AreaChart,
@@ -62,7 +63,7 @@ const RADIAN = Math.PI / 180;
 const Customers = () => {
   return (
     <div className="overview">
-      <Sidebar />
+      <Sidebartrial />
       <div className="containerOverview">
         <Navbar />
         <div className="homeLayout">
