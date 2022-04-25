@@ -1,5 +1,5 @@
 import React from "react";
-// import "./newbusiness.scss";
+import "./sales.scss";
 
 import { Link } from "react-router-dom";
 
@@ -28,10 +28,12 @@ function Sales() {
           <div className="card2">
             <div>
               <br />
-              <div>alert You do not have any sales yet</div>
-              <div>Click the button below to add them.</div>
+              <div className="saleDetails">
+                <div>alert You do not have any sales yet</div>
+                <div>Click the button below to add them.</div>
+              </div>
               <br />
-              <div className="button">Add Sale</div>
+              <button className="button1">Add Sale</button>
             </div>
           </div>
         </div>

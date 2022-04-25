@@ -22,7 +22,7 @@
 .card {
   display: flex;
   flex-flow: column;
-  width: 100%;
+
   box-shadow: 2px 4px 10px 1px rgba(8, 8, 8, 0.47);
 
   border-radius: 2px;
@@ -30,7 +30,7 @@
   text-decoration: none;
   background-color: #fff;
   width: 25%;
-  height: 70vh;
+  height: 25rem;
   margin-top: -20px;
   margin-left: 50px;
   .cardimage {

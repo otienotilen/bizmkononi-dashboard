@@ -127,9 +127,17 @@ const Newbusiness = () => {
 
               <div>
                 <br />
-
                 <br />
-                <div className="button">Manage</div>
+                Image. Click on the image below to set business image
+                <br />
+                <br />
+              </div>
+
+              <hr></hr>
+              <div className="image1">Image</div>
+              <div>
+                <br />
+                <button className="button1">Create Business</button>
               </div>
             </div>
           </div>
