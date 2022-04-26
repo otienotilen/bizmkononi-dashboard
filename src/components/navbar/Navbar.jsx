@@ -15,31 +15,30 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
   return (
     <div className="navbar">
       <div className="wrapper">
-         <div className="nav_icon" onClick={() => openSidebar()}>
-         
-        <i className="fa fa-bars" aria-hidden="true"> </i>
-      </div>
-       
-          <FullscreenExitOutlinedIcon className="icon" />
-            
-         <a style={{
+        <a
+          style={{
             marginLeft: "30px",
             color: "#3282B8",
-            fontSize: "20px"
-        }}>Botique Shop</a>
+            fontSize: "20px",
+          }}
+        >
+          Botique Shop
+        </a>
         <div className="search">
-          <input type="text" placeholder="Search for insights, sales, customer" />
+          <input
+            type="text"
+            placeholder="Search for insights, sales, customer"
+          />
           <SearchOutlinedIcon />
         </div>
         <div className="items">
-         
           <div className="item">
             <DarkModeOutlinedIcon
               className="icon"
               onClick={() => dispatch({ type: "TOGGLE" })}
             />
           </div>
-          <div className="item">
+          <div className="item1">
             <FullscreenExitOutlinedIcon className="icon" />
           </div>
           <div className="item">

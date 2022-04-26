@@ -44,7 +44,10 @@ const Overview = (props) => {
             <p>Here is your today's insights</p>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+          <div
+            className="trials"
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+          >
             <div className="trial">
               <h5 style={{ color: "blue" }}>$4000</h5>
               <h5>Total Revenue</h5>

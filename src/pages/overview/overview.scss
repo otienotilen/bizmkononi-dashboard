@@ -1,56 +1,80 @@
-.overview{
-    display: flex;
+.overview {
+  display: flex;
   width: 100%;
   .containerOverview {
     flex: 6 !important;
-    
-   .homeLayout{
-     overflow-y: auto;
-     height: 90vh;
-     .greeting{
-         margin: 50px;
-     }
-   }
+
+    .homeLayout {
+      overflow-y: auto;
+      height: 90vh;
+      .greeting {
+        margin: 50px;
+      }
+    }
     .widgets,
     .charts {
       display: flex;
       padding: 20px;
       gap: 20px;
     }
-    }
-    .trial{
-       align-items: center !important;
-      padding-top: 60px;
-      gap: 20px;
-      width: 200px;
-      
-      justify-content: center !important;
-      text-align: center;
-      
-      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-      border-radius: 10px;
-      height: 100px;  
-    }
+  }
+  .trial {
+    align-items: center !important;
+    padding-top: 60px;
+    gap: 20px;
+    width: 200px;
 
-    .chart {
-      margin-top: 50px;
-  flex: 4;
-  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-  padding: 10px;
-  color: gray;
+    justify-content: center !important;
+    text-align: center;
 
-  .title {
-    margin-bottom: 20px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 10px;
+    height: 100px;
   }
 
-  .chartGrid {
-    stroke: rgb(228, 225, 225);
+  .chart {
+    margin-top: 50px;
+    flex: 4;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+    color: gray;
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .chartGrid {
+      stroke: rgb(228, 225, 225);
+    }
+  }
+  .chartContainer {
+    display: flex;
   }
 }
-.chartContainer{
-  display: flex;
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .homeLayout {
+    width: 30rem;
+  }
+  .overview {
+    width: 30rem;
+    display: block;
+  }
+  .overview.trials {
+    display: block;
+  }
 }
-
+@media only screen and (max-width: 425px) {
+  .homeLayout {
+    width: 20rem;
+  }
+  .overview {
+    width: 30rem;
+    display: inline;
+  }
+  .overview.trials {
+    display: block;
+  }
 }

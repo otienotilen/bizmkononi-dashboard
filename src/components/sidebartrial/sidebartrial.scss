@@ -11,6 +11,11 @@
   border-right: 0.5px solid rgb(230, 227, 227);
   height: 100vh;
 }
+.sidebartrial {
+  background-color: #bbe1fa;
+
+  height: 100vh;
+}
 .top {
   height: 50px;
   display: flex;
@@ -29,5 +34,10 @@
     width: 35px;
     height: 30px;
     object-fit: contain;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sidebartrial {
+    width: 30rem;
   }
 }

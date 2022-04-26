@@ -7,7 +7,7 @@ import am from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 function Sidebartrial() {
   return (
-    <div className="sidebarTrial">
+    <div className="sidebartrial">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">
@@ -18,10 +18,6 @@ function Sidebartrial() {
       </div>
       <br />
       <Sidebaritem />
-
-      {/* {items.map((item, index) => (
-        <Sidebaritem key={index} item={item} />
-      ))}  */}
     </div>
   );
 }
