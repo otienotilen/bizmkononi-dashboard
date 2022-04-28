@@ -6,7 +6,7 @@ import am from "../../../assets/logo.png";
 import Navbar from "../../../components/navbar/Navbar";
 import Sidebartrial from "../../../components/sidebartrial/Sidebartrial";
 
-function Supplies() {
+function Newsupplier() {
   return (
     <div className="overview">
       <Sidebartrial />
@@ -41,4 +41,4 @@ function Supplies() {
   );
 }
 
-export default Supplies;
+export default Newsupplier;

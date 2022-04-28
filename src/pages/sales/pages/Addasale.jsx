@@ -53,9 +53,8 @@ function Addasale() {
                 </form>
               </div>
               <div className="a">
-                <br />
-
                 <div className="form">
+                  <br />
                   Quantity
                   <form>
                     <button>@</button>
@@ -68,11 +67,64 @@ function Addasale() {
                     />
                   </form>
                 </div>
+                <div className="form">
+                  <br />
+                  Item Price e.g 1000
+                  <form>
+                    <button>@</button>
+                    <input
+                      className="sdd"
+                      name="name"
+                      type="text"
+                      placeholder="Price e.g 1000"
+                      style={{ width: "10rem" }}
+                    />
+                  </form>
+                  <br />
+                </div>
               </div>
-
-              <br />
-              <div className="button">Add Sale</div>
+              Sub Total: Ksh 0.00
             </div>
+            <div style={{ marginTop: "10px" }}>
+              <button>Add Product</button>
+            </div>
+            <div style={{ display: "flex" }}>
+              <div style={{ marginTop: "10rem" }}>Grand Total: Ksh 0.00</div>
+              <div className="amountcharged">
+                <div className="form">
+                  <br />
+                  Amount Charged
+                  <form>
+                    <button>@</button>
+                    <input
+                      className="sdd"
+                      name="name"
+                      type="text"
+                      placeholder="Charged Amount e.g 1000"
+                      style={{ width: "10rem" }}
+                    />
+                  </form>
+                  <br />
+                </div>
+                <div className="form">
+                  <br />
+                  Amount Charged
+                  <form>
+                    <button>@</button>
+                    <input
+                      className="sdd"
+                      name="name"
+                      type="text"
+                      placeholder="Charged Amount e.g 1000"
+                      style={{ width: "10rem" }}
+                    />
+                  </form>
+                  <br />
+                </div>
+                Balance: Ksh 0.00
+              </div>
+            </div>
+            <button>Preview</button>
           </div>
         </div>
       </div>
