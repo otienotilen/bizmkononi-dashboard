@@ -1,6 +1,7 @@
 import "./overview.scss";
 
 import Sidebar from "../../components/sidebar/Sidebar";
+import Sidebarcopy from "../../components/sidebar/Sidebarcopy";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebartrial from "../../components/sidebartrial/Sidebartrial";
 import {
